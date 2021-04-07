@@ -1,6 +1,9 @@
 // Add your functions here
 
-let map = function makeNegative(array){ return array.map(element => element * -1) }
+function makeNegative(array){ return array.map(element => element * -1) }
 
-map = function unChanged(array){ return array }
+// function unChanged(array){ return array }
 
+// let map = function(sourceArray, aFunction)
+
+map(sourceArray, makeNegative)
