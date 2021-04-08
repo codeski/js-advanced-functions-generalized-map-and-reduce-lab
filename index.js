@@ -1,9 +1,20 @@
 // Add your functions here
 
-function makeNegative(array){ return array.map(element => element * -1) }
+function map(src, aFunction) {
+    let r = []
+    for (let i = 0; i < src.length; i++ ) {
+        r.push(aFunction(src[i])) 
+    }
+    return r
+}
 
-// function unChanged(array){ return array }
-
-// let map = function(sourceArray, aFunction)
-
-map(sourceArray, makeNegative)
+function reduce(src, aFunction, startingPoint){
+    if (startingPoint) {
+        let value = startingPoint
+    } 
+    let r 
+    for (let i = 0; i < src.length; i++) {
+        r = aFunction(src[i])
+    }
+    return r
+}
