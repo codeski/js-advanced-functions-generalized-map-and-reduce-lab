@@ -9,12 +9,12 @@ function map(src, aFunction) {
 }
 
 function reduce(src, aFunction, startingPoint){
-    if (startingPoint) {
-        let value = startingPoint
-    } 
-    let r 
+    let r
     for (let i = 0; i < src.length; i++) {
-        r = aFunction(src[i], i)
+        r = aFunction(src[i], i + 1)
+    }
+    if (startingPoint) {
+        return r + startingPoint
     }
     return r
 }
