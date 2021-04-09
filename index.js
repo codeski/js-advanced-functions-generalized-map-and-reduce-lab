@@ -14,7 +14,7 @@ function reduce(src, aFunction, startingPoint){
     } 
     let r 
     for (let i = 0; i < src.length; i++) {
-        r = aFunction(src[i])
+        r = aFunction(src[i], i)
     }
     return r
 }
